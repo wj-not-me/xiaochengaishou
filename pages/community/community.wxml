@@ -1,0 +1,32 @@
+<!--pages/community/community.wxml-->
+<view class="community-search">
+  <view class="search-box">
+    <image class="icon-search" src="../../images/icon-search.png"></image>
+    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入名称、地址、街道查询" name="key" value="{{key}}" 
+    confirm-type = "search" bindconfirm="searchCommunity"/>    
+  </view>
+</view>
+
+<view class="community-list">
+  <block wx:for="{{communityList}}" wx:key="id" wx:for-item="community">
+    <view class="panel-community" data-id="{{community.id}}" bindtap="chooseCommunity">
+      <view class="panel-community-name">
+        <view wx:if="{{community.id !== chosenId}}" class="button-choose" >使用</view>
+        <image wx:else src="../../images/address-checked.png" class="image-choosen">
+        </image>
+        {{community.village}}
+      </view>
+      <view class="panel-community-street">{{community.street}}</view>
+      <view class="panel-community-committee">{{community.committee}}</view>
+      <view class="panel-community-address">{{community.address}}</view>         
+    </view>
+  </block>
+  <block wx:if="{{communityList.length > 0}}">
+    <view wx:if="{{noMore}}" class="panel-noMore">
+      ~ o(╯□╰)o 没有更多数据啦 ~ 
+    </view>
+  </block>
+  <block wx:else>
+    <image class="empty-image" src="../../images/empty.png"></image>
+  </block>
+</view>

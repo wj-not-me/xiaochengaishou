@@ -1,0 +1,54 @@
+/* pages/recycle/recycle.wxss */
+
+.recycle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #f0f0f0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title_image {
+  width: 750rpx;
+  height: 622rpx;
+}
+
+.operation_wrapper {
+  width: 690rpx;
+  height: 198rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  position: absolute;
+  top: 540rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reserve_warpper {
+  text-align: center;
+  width: 25%;
+}
+
+.call_warpper {
+  width: 25%;
+  text-align: center;
+}
+
+.type_warpper {
+  width: 25%;
+  text-align: center;
+}
+
+.operation_image {
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.operation_description {
+  /* margin-top: 21rpx; */
+  font-size: 26rpx;
+}

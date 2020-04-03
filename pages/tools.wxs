@@ -1,0 +1,55 @@
+
+//回收类型子类判断是否要显示下边框
+var showBorderBottom = function (a, b) {
+  return a.length % 4 != 0 && b < 4 * parseInt(a.length / 4);
+};
+
+//根据id判断元素是否在数组中
+var checkElement = function (a, b) {
+  for(var i = 0; i < a.length; i++) {
+    if (a[i].id == b.id) {
+      return true;
+    }
+  }
+  return false;
+};
+
+//可回收类型名称拼接
+var recyclingTypesStr = function (a) {
+  if(!a) return '';
+  var str = ""; 
+  (typeof(a) == "string" ? JSON.parse(a) : a).forEach(function(element){
+    str = str == "" ? element.name : str + '、' + element.name;
+  });
+  return str;
+}
+
+//根据状态值判断状态名
+var reservationStatusName = function (a) {
+  if (a == 0) {
+    return '已删除';
+  }
+  if(a == 1) {
+    return '待提交';
+  }
+  if (a == 2) {
+    return '已提交';
+  }
+  if (a == 3) {
+    return '已接单';
+  }
+  if (a == 4) {
+    return '已完成';
+  }
+  if (a == 5) {
+    return '已取消';
+  }
+}
+
+
+module.exports = {
+  showBorderBottom: showBorderBottom,
+  checkElement: checkElement,
+  recyclingTypesStr: recyclingTypesStr,
+  reservationStatusName: reservationStatusName
+};

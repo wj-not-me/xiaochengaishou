@@ -1,0 +1,1181 @@
+{
+  "cityList": [
+    {
+      "id": 1,
+      "name": "上海市",
+      "cityList": [
+        {
+          "id": 2,
+          "name": "黄浦区",
+          "cityList": [
+            {
+              "id": 18,
+              "name": "外滩街道",
+              "cityList": null
+            },
+            {
+              "id": 19,
+              "name": "南京东路街道",
+              "cityList": null
+            },
+            {
+              "id": 20,
+              "name": "半淞园路街道",
+              "cityList": null
+            },
+            {
+              "id": 21,
+              "name": "小东门街道",
+              "cityList": null
+            },
+            {
+              "id": 22,
+              "name": "老西门街道",
+              "cityList": null
+            },
+            {
+              "id": 23,
+              "name": "豫园街道",
+              "cityList": null
+            },
+            {
+              "id": 24,
+              "name": "打浦桥街道",
+              "cityList": null
+            },
+            {
+              "id": 25,
+              "name": "淮海中路街道",
+              "cityList": null
+            },
+            {
+              "id": 26,
+              "name": "瑞金二路街道",
+              "cityList": null
+            },
+            {
+              "id": 27,
+              "name": "五里桥街道",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "徐汇区",
+          "cityList": [
+            {
+              "id": 28,
+              "name": "湖南路街道",
+              "cityList": null
+            },
+            {
+              "id": 29,
+              "name": "天平路街道",
+              "cityList": null
+            },
+            {
+              "id": 30,
+              "name": "枫林路街道",
+              "cityList": null
+            },
+            {
+              "id": 31,
+              "name": "徐家汇街道",
+              "cityList": null
+            },
+            {
+              "id": 32,
+              "name": "斜土路街道",
+              "cityList": null
+            },
+            {
+              "id": 33,
+              "name": "长桥街道",
+              "cityList": null
+            },
+            {
+              "id": 34,
+              "name": "漕河泾街道",
+              "cityList": null
+            },
+            {
+              "id": 35,
+              "name": "康健新村街道",
+              "cityList": null
+            },
+            {
+              "id": 36,
+              "name": "虹梅路街道",
+              "cityList": null
+            },
+            {
+              "id": 37,
+              "name": "田林街道",
+              "cityList": null
+            },
+            {
+              "id": 38,
+              "name": "凌云路街道",
+              "cityList": null
+            },
+            {
+              "id": 39,
+              "name": "龙华街道",
+              "cityList": null
+            },
+            {
+              "id": 40,
+              "name": "华泾镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "长宁区",
+          "cityList": [
+            {
+              "id": 41,
+              "name": "华阳路街道",
+              "cityList": null
+            },
+            {
+              "id": 42,
+              "name": "新华路街道",
+              "cityList": null
+            },
+            {
+              "id": 43,
+              "name": "江苏路街道",
+              "cityList": null
+            },
+            {
+              "id": 44,
+              "name": "天山路街道",
+              "cityList": null
+            },
+            {
+              "id": 45,
+              "name": "周家桥街道",
+              "cityList": null
+            },
+            {
+              "id": 46,
+              "name": "虹桥街道",
+              "cityList": null
+            },
+            {
+              "id": 47,
+              "name": "仙霞新村街道",
+              "cityList": null
+            },
+            {
+              "id": 48,
+              "name": "程家桥街道",
+              "cityList": null
+            },
+            {
+              "id": 49,
+              "name": "北新泾街道",
+              "cityList": null
+            },
+            {
+              "id": 50,
+              "name": "新泾镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "静安区",
+          "cityList": [
+            {
+              "id": 51,
+              "name": "江宁路街道",
+              "cityList": null
+            },
+            {
+              "id": 52,
+              "name": "静安寺街道",
+              "cityList": null
+            },
+            {
+              "id": 53,
+              "name": "南京西路街道",
+              "cityList": null
+            },
+            {
+              "id": 54,
+              "name": "曹家渡街道",
+              "cityList": null
+            },
+            {
+              "id": 55,
+              "name": "石门二路街道",
+              "cityList": null
+            },
+            {
+              "id": 56,
+              "name": "天目西路街道",
+              "cityList": null
+            },
+            {
+              "id": 57,
+              "name": "北站街道",
+              "cityList": null
+            },
+            {
+              "id": 58,
+              "name": "宝山路街道",
+              "cityList": null
+            },
+            {
+              "id": 59,
+              "name": "芷江西路街道",
+              "cityList": null
+            },
+            {
+              "id": 60,
+              "name": "共和新路街道",
+              "cityList": null
+            },
+            {
+              "id": 61,
+              "name": "大宁路街道",
+              "cityList": null
+            },
+            {
+              "id": 62,
+              "name": "彭浦新村街道",
+              "cityList": null
+            },
+            {
+              "id": 63,
+              "name": "临汾路街道",
+              "cityList": null
+            },
+            {
+              "id": 64,
+              "name": "彭浦镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "普陀区",
+          "cityList": [
+            {
+              "id": 65,
+              "name": "长寿路街道",
+              "cityList": null
+            },
+            {
+              "id": 66,
+              "name": "曹杨新村街道",
+              "cityList": null
+            },
+            {
+              "id": 67,
+              "name": "长风新村街道",
+              "cityList": null
+            },
+            {
+              "id": 68,
+              "name": "宜川路街道",
+              "cityList": null
+            },
+            {
+              "id": 69,
+              "name": "甘泉路街道",
+              "cityList": null
+            },
+            {
+              "id": 70,
+              "name": "石泉路街道",
+              "cityList": null
+            },
+            {
+              "id": 71,
+              "name": "真如镇街道",
+              "cityList": null
+            },
+            {
+              "id": 72,
+              "name": "万里街道",
+              "cityList": null
+            },
+            {
+              "id": 73,
+              "name": "长征镇",
+              "cityList": null
+            },
+            {
+              "id": 74,
+              "name": "桃浦镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "虹口区",
+          "cityList": [
+            {
+              "id": 75,
+              "name": "四川北路街道",
+              "cityList": null
+            },
+            {
+              "id": 76,
+              "name": "提篮桥街道",
+              "cityList": null
+            },
+            {
+              "id": 77,
+              "name": "欧阳路街道",
+              "cityList": null
+            },
+            {
+              "id": 78,
+              "name": "广中路街道",
+              "cityList": null
+            },
+            {
+              "id": 79,
+              "name": "凉城新村街道",
+              "cityList": null
+            },
+            {
+              "id": 80,
+              "name": "嘉兴路街道",
+              "cityList": null
+            },
+            {
+              "id": 81,
+              "name": "曲阳路街道",
+              "cityList": null
+            },
+            {
+              "id": 82,
+              "name": "江湾镇街道",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "杨浦区",
+          "cityList": [
+            {
+              "id": 83,
+              "name": "定海路街道",
+              "cityList": null
+            },
+            {
+              "id": 84,
+              "name": "大桥街道",
+              "cityList": null
+            },
+            {
+              "id": 85,
+              "name": "平凉路街道",
+              "cityList": null
+            },
+            {
+              "id": 86,
+              "name": "江浦路街道",
+              "cityList": null
+            },
+            {
+              "id": 87,
+              "name": "控江路街道",
+              "cityList": null
+            },
+            {
+              "id": 88,
+              "name": "殷行街道",
+              "cityList": null
+            },
+            {
+              "id": 89,
+              "name": "长白新村街道",
+              "cityList": null
+            },
+            {
+              "id": 90,
+              "name": "延吉新村街道",
+              "cityList": null
+            },
+            {
+              "id": 91,
+              "name": "五角场街道",
+              "cityList": null
+            },
+            {
+              "id": 92,
+              "name": "四平路街道",
+              "cityList": null
+            },
+            {
+              "id": 93,
+              "name": "新江湾城街道",
+              "cityList": null
+            },
+            {
+              "id": 94,
+              "name": "五角场镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "闵行区",
+          "cityList": [
+            {
+              "id": 95,
+              "name": "江川路街道",
+              "cityList": null
+            },
+            {
+              "id": 96,
+              "name": "古美街道",
+              "cityList": null
+            },
+            {
+              "id": 97,
+              "name": "新虹街道",
+              "cityList": null
+            },
+            {
+              "id": 98,
+              "name": "浦锦街道",
+              "cityList": null
+            },
+            {
+              "id": 99,
+              "name": "莘庄镇",
+              "cityList": null
+            },
+            {
+              "id": 100,
+              "name": "七宝镇",
+              "cityList": null
+            },
+            {
+              "id": 101,
+              "name": "浦江镇",
+              "cityList": null
+            },
+            {
+              "id": 102,
+              "name": "梅陇镇",
+              "cityList": null
+            },
+            {
+              "id": 103,
+              "name": "虹桥镇",
+              "cityList": null
+            },
+            {
+              "id": 104,
+              "name": "马桥镇",
+              "cityList": null
+            },
+            {
+              "id": 105,
+              "name": "吴泾镇",
+              "cityList": null
+            },
+            {
+              "id": 106,
+              "name": "华漕镇",
+              "cityList": null
+            },
+            {
+              "id": 107,
+              "name": "颛桥镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "宝山区",
+          "cityList": [
+            {
+              "id": 108,
+              "name": "吴淞街道",
+              "cityList": null
+            },
+            {
+              "id": 109,
+              "name": "张庙街道",
+              "cityList": null
+            },
+            {
+              "id": 110,
+              "name": "友谊路街道",
+              "cityList": null
+            },
+            {
+              "id": 111,
+              "name": "庙行镇",
+              "cityList": null
+            },
+            {
+              "id": 112,
+              "name": "罗店镇",
+              "cityList": null
+            },
+            {
+              "id": 113,
+              "name": "大场镇",
+              "cityList": null
+            },
+            {
+              "id": 114,
+              "name": "顾村镇",
+              "cityList": null
+            },
+            {
+              "id": 115,
+              "name": "罗泾镇",
+              "cityList": null
+            },
+            {
+              "id": 116,
+              "name": "杨行镇",
+              "cityList": null
+            },
+            {
+              "id": 117,
+              "name": "月浦镇",
+              "cityList": null
+            },
+            {
+              "id": 118,
+              "name": "淞南镇",
+              "cityList": null
+            },
+            {
+              "id": 119,
+              "name": "高境镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "嘉定区",
+          "cityList": [
+            {
+              "id": 120,
+              "name": "嘉定镇街道",
+              "cityList": null
+            },
+            {
+              "id": 121,
+              "name": "新成路街道",
+              "cityList": null
+            },
+            {
+              "id": 122,
+              "name": "真新街道",
+              "cityList": null
+            },
+            {
+              "id": 123,
+              "name": "马陆镇",
+              "cityList": null
+            },
+            {
+              "id": 124,
+              "name": "南翔镇",
+              "cityList": null
+            },
+            {
+              "id": 125,
+              "name": "江桥镇",
+              "cityList": null
+            },
+            {
+              "id": 126,
+              "name": "安亭镇",
+              "cityList": null
+            },
+            {
+              "id": 127,
+              "name": "外冈镇",
+              "cityList": null
+            },
+            {
+              "id": 128,
+              "name": "徐行镇",
+              "cityList": null
+            },
+            {
+              "id": 129,
+              "name": "华亭镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "浦东新区",
+          "cityList": [
+            {
+              "id": 130,
+              "name": "潍坊新村街道",
+              "cityList": null
+            },
+            {
+              "id": 131,
+              "name": "陆家嘴街道",
+              "cityList": null
+            },
+            {
+              "id": 132,
+              "name": "塘桥街道",
+              "cityList": null
+            },
+            {
+              "id": 133,
+              "name": "周家渡街道",
+              "cityList": null
+            },
+            {
+              "id": 134,
+              "name": "东明路街道",
+              "cityList": null
+            },
+            {
+              "id": 135,
+              "name": "洋泾街道",
+              "cityList": null
+            },
+            {
+              "id": 136,
+              "name": "上钢新村街道",
+              "cityList": null
+            },
+            {
+              "id": 137,
+              "name": "沪东新村街道",
+              "cityList": null
+            },
+            {
+              "id": 138,
+              "name": "金杨新村街道",
+              "cityList": null
+            },
+            {
+              "id": 139,
+              "name": "浦兴路街道",
+              "cityList": null
+            },
+            {
+              "id": 140,
+              "name": "南码头路街道",
+              "cityList": null
+            },
+            {
+              "id": 141,
+              "name": "花木街道",
+              "cityList": null
+            },
+            {
+              "id": 142,
+              "name": "川沙新镇",
+              "cityList": null
+            },
+            {
+              "id": 143,
+              "name": "合庆镇",
+              "cityList": null
+            },
+            {
+              "id": 144,
+              "name": "曹路镇",
+              "cityList": null
+            },
+            {
+              "id": 145,
+              "name": "高东镇",
+              "cityList": null
+            },
+            {
+              "id": 146,
+              "name": "高桥镇",
+              "cityList": null
+            },
+            {
+              "id": 147,
+              "name": "高行镇",
+              "cityList": null
+            },
+            {
+              "id": 148,
+              "name": "金桥镇",
+              "cityList": null
+            },
+            {
+              "id": 149,
+              "name": "张江镇",
+              "cityList": null
+            },
+            {
+              "id": 150,
+              "name": "唐镇",
+              "cityList": null
+            },
+            {
+              "id": 151,
+              "name": "北蔡镇",
+              "cityList": null
+            },
+            {
+              "id": 152,
+              "name": "三林镇",
+              "cityList": null
+            },
+            {
+              "id": 153,
+              "name": "惠南镇",
+              "cityList": null
+            },
+            {
+              "id": 154,
+              "name": "新场镇",
+              "cityList": null
+            },
+            {
+              "id": 155,
+              "name": "大团镇",
+              "cityList": null
+            },
+            {
+              "id": 156,
+              "name": "周浦镇",
+              "cityList": null
+            },
+            {
+              "id": 157,
+              "name": "航头镇",
+              "cityList": null
+            },
+            {
+              "id": 158,
+              "name": "康桥镇",
+              "cityList": null
+            },
+            {
+              "id": 159,
+              "name": "宣桥镇",
+              "cityList": null
+            },
+            {
+              "id": 160,
+              "name": "祝桥镇",
+              "cityList": null
+            },
+            {
+              "id": 161,
+              "name": "泥城镇",
+              "cityList": null
+            },
+            {
+              "id": 162,
+              "name": "书院镇",
+              "cityList": null
+            },
+            {
+              "id": 163,
+              "name": "万祥镇",
+              "cityList": null
+            },
+            {
+              "id": 164,
+              "name": "老港镇",
+              "cityList": null
+            },
+            {
+              "id": 165,
+              "name": "南汇新城镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "金山区",
+          "cityList": [
+            {
+              "id": 166,
+              "name": "石化街道",
+              "cityList": null
+            },
+            {
+              "id": 167,
+              "name": "枫泾镇",
+              "cityList": null
+            },
+            {
+              "id": 168,
+              "name": "朱泾镇",
+              "cityList": null
+            },
+            {
+              "id": 169,
+              "name": "亭林镇",
+              "cityList": null
+            },
+            {
+              "id": 170,
+              "name": "漕泾镇",
+              "cityList": null
+            },
+            {
+              "id": 171,
+              "name": "山阳镇",
+              "cityList": null
+            },
+            {
+              "id": 172,
+              "name": "金山卫镇",
+              "cityList": null
+            },
+            {
+              "id": 173,
+              "name": "张堰镇",
+              "cityList": null
+            },
+            {
+              "id": 174,
+              "name": "廊下镇",
+              "cityList": null
+            },
+            {
+              "id": 175,
+              "name": "吕巷镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "松江区",
+          "cityList": [
+            {
+              "id": 176,
+              "name": "岳阳街道",
+              "cityList": null
+            },
+            {
+              "id": 177,
+              "name": "中山街道",
+              "cityList": null
+            },
+            {
+              "id": 178,
+              "name": "永丰街道",
+              "cityList": null
+            },
+            {
+              "id": 179,
+              "name": "方松街道",
+              "cityList": null
+            },
+            {
+              "id": 180,
+              "name": "广富林街道",
+              "cityList": null
+            },
+            {
+              "id": 181,
+              "name": "九里亭街道",
+              "cityList": null
+            },
+            {
+              "id": 182,
+              "name": "九亭镇",
+              "cityList": null
+            },
+            {
+              "id": 183,
+              "name": "泗泾镇",
+              "cityList": null
+            },
+            {
+              "id": 184,
+              "name": "泖港镇",
+              "cityList": null
+            },
+            {
+              "id": 185,
+              "name": "车墩镇",
+              "cityList": null
+            },
+            {
+              "id": 186,
+              "name": "洞泾镇",
+              "cityList": null
+            },
+            {
+              "id": 187,
+              "name": "叶榭镇",
+              "cityList": null
+            },
+            {
+              "id": 188,
+              "name": "新桥镇",
+              "cityList": null
+            },
+            {
+              "id": 189,
+              "name": "石湖荡镇",
+              "cityList": null
+            },
+            {
+              "id": 190,
+              "name": "新浜镇",
+              "cityList": null
+            },
+            {
+              "id": 191,
+              "name": "佘山镇",
+              "cityList": null
+            },
+            {
+              "id": 192,
+              "name": "小昆山镇",
+              "cityList": null
+            },
+            {
+              "id": 231,
+              "name": "松江工业区",
+              "cityList": null
+            },
+            {
+              "id": 232,
+              "name": "茸北街道",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "青浦区",
+          "cityList": [
+            {
+              "id": 193,
+              "name": "夏阳街道",
+              "cityList": null
+            },
+            {
+              "id": 194,
+              "name": "盈浦街道",
+              "cityList": null
+            },
+            {
+              "id": 195,
+              "name": "香花桥街道",
+              "cityList": null
+            },
+            {
+              "id": 196,
+              "name": "赵巷镇",
+              "cityList": null
+            },
+            {
+              "id": 197,
+              "name": "徐泾镇",
+              "cityList": null
+            },
+            {
+              "id": 198,
+              "name": "华新镇",
+              "cityList": null
+            },
+            {
+              "id": 199,
+              "name": "重固镇",
+              "cityList": null
+            },
+            {
+              "id": 200,
+              "name": "白鹤镇",
+              "cityList": null
+            },
+            {
+              "id": 201,
+              "name": "朱家角镇",
+              "cityList": null
+            },
+            {
+              "id": 202,
+              "name": "练塘镇",
+              "cityList": null
+            },
+            {
+              "id": 203,
+              "name": "金泽镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "奉贤区",
+          "cityList": [
+            {
+              "id": 204,
+              "name": "西渡街道",
+              "cityList": null
+            },
+            {
+              "id": 205,
+              "name": "南桥镇",
+              "cityList": null
+            },
+            {
+              "id": 206,
+              "name": "庄行镇",
+              "cityList": null
+            },
+            {
+              "id": 207,
+              "name": "金汇镇",
+              "cityList": null
+            },
+            {
+              "id": 208,
+              "name": "柘林镇",
+              "cityList": null
+            },
+            {
+              "id": 209,
+              "name": "青村镇",
+              "cityList": null
+            },
+            {
+              "id": 210,
+              "name": "奉城镇",
+              "cityList": null
+            },
+            {
+              "id": 211,
+              "name": "四团镇",
+              "cityList": null
+            },
+            {
+              "id": 212,
+              "name": "海湾镇",
+              "cityList": null
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "崇明区",
+          "cityList": [
+            {
+              "id": 213,
+              "name": "城桥镇",
+              "cityList": null
+            },
+            {
+              "id": 214,
+              "name": "堡镇",
+              "cityList": null
+            },
+            {
+              "id": 215,
+              "name": "庙镇",
+              "cityList": null
+            },
+            {
+              "id": 216,
+              "name": "中兴镇",
+              "cityList": null
+            },
+            {
+              "id": 217,
+              "name": "新河镇",
+              "cityList": null
+            },
+            {
+              "id": 218,
+              "name": "三星镇",
+              "cityList": null
+            },
+            {
+              "id": 219,
+              "name": "向化镇",
+              "cityList": null
+            },
+            {
+              "id": 220,
+              "name": "绿华镇",
+              "cityList": null
+            },
+            {
+              "id": 221,
+              "name": "建设镇",
+              "cityList": null
+            },
+            {
+              "id": 222,
+              "name": "陈家镇",
+              "cityList": null
+            },
+            {
+              "id": 223,
+              "name": "竖新镇",
+              "cityList": null
+            },
+            {
+              "id": 224,
+              "name": "港西镇",
+              "cityList": null
+            },
+            {
+              "id": 225,
+              "name": "港沿镇",
+              "cityList": null
+            },
+            {
+              "id": 226,
+              "name": "新海镇",
+              "cityList": null
+            },
+            {
+              "id": 227,
+              "name": "东平镇",
+              "cityList": null
+            },
+            {
+              "id": 228,
+              "name": "长兴镇",
+              "cityList": null
+            },
+            {
+              "id": 229,
+              "name": "新村乡",
+              "cityList": null
+            },
+            {
+              "id": 230,
+              "name": "横沙乡",
+              "cityList": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

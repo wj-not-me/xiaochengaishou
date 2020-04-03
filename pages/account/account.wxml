@@ -1,0 +1,5 @@
+<!--pages/account/account.wxml-->
+
+<view class="loginOut" bind:tap="loginOut">
+    退出登录
+</view>

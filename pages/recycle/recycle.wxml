@@ -1,0 +1,24 @@
+<!--pages/recycle/recycle.wxml-->
+<view class="recycle">
+  <view class="title_wapper">
+    <image class="title_image" src="../../images/payInPerson@3x.png" background-size="cover"></image>
+  </view>
+  <view class="operation_wrapper">
+    <view class="reserve_warpper">
+      <image class="operation_image image_reserve" src="../../images/reserveRecycle@3x.png" background-size="cover" catchtap="onlineReservation"></image>
+      <view class="operation_description">预约回收</view>
+    </view>
+    <view class="call_warpper">
+      <image class="operation_image image_call" src="../../images/phoneRecycle@3x.png" background-size="cover" catchtap="phoneReservation"></image>
+      <view class="operation_description">电话预约</view>
+    </view>
+    <view class="type_warpper">
+      <image class="operation_image image_type" src="../../images/recycleType@3x.png" background-size="cover" catchtap="recyclingType"></image>
+      <view class="operation_description">回收类型</view>
+    </view>
+    <view class="type_warpper">
+      <image class="operation_image image_type" src="../../images/guidePrice@3x.png" background-size="cover" catchtap="guidingPrice"></image>
+      <view class="operation_description">指导价格</view>
+    </view>
+  </view>
+</view>

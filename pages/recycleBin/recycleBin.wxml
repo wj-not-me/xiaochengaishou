@@ -1,0 +1,35 @@
+<!--pages/recycleBin/recycleBin.wxml-->
+<view class="status-box"> 
+  <view class="status-item {{currentType == 2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">回收站</view>
+  <view class="status-item {{currentType == 3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">集散场</view>
+</view>
+<view class="bin-search">
+  <view class="search-box">
+    <image class="icon-search" src="../../images/icon-search.png"></image>
+    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入名称、地址、街道查询" name="key" value="{{key}}" 
+    confirm-type = "search" bindconfirm="searchBin"/>    
+  </view>
+</view>
+<view class="bin-list">
+  <block wx:for="{{binList}}" wx:key="id" wx:for-item="bin">
+    <view class="panel-bin" data-id="{{bin.id}}" bindtap="chooseBin">
+      <view class="panel-bin-name">
+        <view wx:if="{{bin.id !== chosenId}}" class="button-choose" data-id="{{bin.id}}">使用</view>
+        <image wx:else src="../../images/address-checked.png" class="image-choosen">
+        </image>
+        {{bin.name}}
+      </view>
+      <view class="panel-bin-street">{{bin.streetName}}</view>
+      <view class="panel-bin-address">{{bin.address}}</view>
+      <view class="panel-bin-contact">{{bin.contacts}}</view>    
+    </view>
+  </block>
+  <block wx:if="{{binList.length > 0}}">
+    <view wx:if="{{noMore}}" class="panel-noMore">
+      ~ o(╯□╰)o 没有更多数据啦 ~ 
+    </view>
+  </block>
+  <block wx:else>
+    <image class="empty-image" src="../../images/empty.png"></image>
+  </block>
+</view>

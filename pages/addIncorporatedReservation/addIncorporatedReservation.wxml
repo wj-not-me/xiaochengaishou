@@ -1,0 +1,31 @@
+<!--pages/addIncorporatedReservation/addIncorporatedReservation.wxml-->
+
+<view class="panel-chooseCategory {{rel ? 'rel' : ''}}">
+  <scroll-view class="category-container" scroll-y="{{rel ? true : false}}" scroll-anchoring="true" scroll-top="{{leftTotop}}">
+    <block wx:for="{{categories}}" wx:key="id" wx:for-item="category">
+      <view class="category-item {{category.id === categorySelectedId  || categorySelectedId ===  '' && index === 0 ? 'category-item-selected' : ''}}"  
+      id="cv{{category.id}}" data-id="{{category.id}}" bindtap="onCategoryTap">
+        <view class="category-item-name">{{category.name}}</view>
+      </view>
+    </block>
+  </scroll-view>
+  <scroll-view class="subCategory-container" scroll-y="{{rel ? true : false}}" scroll-anchoring="true" bindscroll="onSubCategoryScroll" scroll-into-view="{{categoryGroupId}}">
+    <block wx:for="{{categories}}" wx:key="id" wx:for-item="category">
+      <view id="scv{{category.id}}" class="category-group">
+        <view class="subCategory-title">{{index === 0 && categorSelectedName !== '' ? categorSelectedName : category.name}}</view>
+        <block wx:for="{{category.childList}}" wx:key="id" wx:for-item="subCategory">
+          <view class="subCategory-item">
+            <image class="subCategory-item-pic" src="{{subCategory.picUrl}}"></image>
+            <view class="subCategory-item-name">{{subCategory.name}}</view>
+            <image class="subCategory-item-add" src="../../images/add.png"></image>
+          </view>
+        </block>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<view class="panel-fillForm">
+</view>
+<view class="panel-uploadPic"></view>
+<view class="panel-cart">
+</view>

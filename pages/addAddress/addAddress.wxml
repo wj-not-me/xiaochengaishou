@@ -1,0 +1,61 @@
+<!--pages/addAddress/addAddress.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="panel-userName inputPanel">
+    <view class="inputLabel"><view class="necessary">*</view>联系姓名</view>
+    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入预约回收人称呼" name="name" value="{{model.name}}"/>
+    <input name="id" value="{{model.id}}" class="hiddenInput"></input>
+  </view>
+  <view class="panel-phoneNo inputPanel">
+    <view class="inputLabel"><view class="necessary">*</view>手机号码</view>
+    <input class="inputContent" type="number" placeholder-class="inputContent-placeholder" maxlength="11" placeholder="输入预约回收人手机号码" name="mobile" value="{{model.mobile}}"/>
+  </view>
+  <view class="panel-address inputPanel">
+    <view class="inputLabel"><view class="necessary"></view>所在地区</view>
+    <view class="inputContent">
+      <picker mode="multiSelector" bindcancel="bindMultiPickerCancel" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange2" 
+value="{{sel_distinctIndex}}" range="{{distinctArray}}" range-key="name" name="citiesIndex">
+          <view class="picker">
+            {{distinctArray[0][sel_distinctIndex[0]].name}} {{distinctArray[1][sel_distinctIndex[1]].name}}
+          </view>        
+      </picker>
+    </view>
+    <image src="../../images/right-black.png"></image>
+    <input class="hiddenInput" name="provinceCode" value="{{cityArray[0][sel_citiesIndex[0]].code}}" />
+    <input class="hiddenInput" name="cityCode" value="{{cityArray[1][sel_citiesIndex[1]].code}}" />
+    <input class="hiddenInput" name="districtCode" value="{{cityArray[2][sel_citiesIndex[2]].code}}" />
+    <input class="hiddenInput" name="subdistrictCode" value="{{cityArray[3][sel_citiesIndex[3]].code}}" />
+  </view>
+  <!-- <view class="panel-neighborhoodCommittee inputPanel">
+    <text class="inputLabel">所属居委会</text>
+    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入居委会名" name="committeeName" value="{{model.committeeName}}" />
+  </view> -->
+  <view class="panel-community inputPanel">
+    <view class="inputLabel"><view class="necessary"></view>小区/单位名</view>
+    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入小区或单位名字" name="communityName" value="{{model.communityName}}" />
+    <image src="../../images/right-black.png" bindtap="chooseCommunity"></image>
+  </view>
+  <view class="panel-fullAddress inputPanel">
+    <view class="inputLabel"><view class="necessary">*</view>详细地址</view>
+    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入详细地址，如道路、门牌号" name="address" value="{{model.address}}" />
+  </view>
+  <!-- <view class="panel-addressLabel inputPanel">
+    <text class="inputLabel">标签</text>
+    <view class="inputContent">
+      <view class="habitation {{sel_addressLabel == 1 ? 'checkedAddressLabel' : 'addressLabel'}}" data-idx="1" bindtap="selectAddressLabel">居住区</view>
+      <view class="company {{sel_addressLabel == 2 ? 'checkedAddressLabel' : 'addressLabel'}}" data-idx="2" bindtap="selectAddressLabel">单位</view>
+      <input name="addressLabel" value="{{sel_addressLabel}}" class="hiddenInput"></input>
+    </view>
+  </view> -->
+  <view class="panel-setDefault inputPanel">
+    <view class="inputLabel"><view class="necessary"></view>设为默认</view>
+    <view class="inputContent">
+      <switch type="switch" color="#FF7B23" checked="{{model.isDefault}}" name="isDefault" />
+    </view>
+  </view>
+
+  <view class="panel-saveAddress">
+    <button formType="submit" class="btn-save" type="primary" size="default" loading="{{loading}}"> 提交 </button>
+  </view>
+</form>
+
+

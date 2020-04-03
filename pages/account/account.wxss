@@ -1,0 +1,13 @@
+/* pages/account/account.wxss */
+
+.loginOut { 
+  width: 750rpx;
+  height: 90rpx;
+  background: #ffffff;
+  margin-top: 25rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 500;
+  color:rgba(73,80,96,1);
+}

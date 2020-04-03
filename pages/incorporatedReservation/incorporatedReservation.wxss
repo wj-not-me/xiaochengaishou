@@ -1,0 +1,10 @@
+/* pages/incorporatedReservation/incorporatedReservation.wxss */
+
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.trans {
+  transition: .2s;
+}

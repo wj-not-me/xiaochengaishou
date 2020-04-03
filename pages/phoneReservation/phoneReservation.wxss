@@ -1,0 +1,81 @@
+/* pages/phoneReservation/phoneReservation.wxss */
+
+.search_wrapper {
+  width: 100vw;
+  height: 80rpx;
+  background: #FFFFFF;
+}
+
+
+.section_wrapper {
+  width: 690rpx;
+  height: 220rpx;
+  border-radius: 16rpx;
+  background: #FF7B23;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+
+.section_address {
+  width: 690rpx;
+  height: 160rpx;
+  border-radius: 16rpx;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.section_garbageImage {
+  width: 104rpx;
+  height: 104rpx;
+  margin-left: 30rpx;
+}
+
+.section_district_garbage {
+  margin-left: 33rpx;
+}
+
+.district {
+  font-size: 30rpx;
+  margin-top: 12rpx;
+}
+
+.garbage {
+  font-size: 26rpx;
+  color: #80848F;
+  margin-bottom: 12rpx;
+}
+
+.section_phone {
+  width: 690rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_telephone {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.phoneNo {
+  font-size: 26rpx;
+  color: #FFFFFF;
+  margin-left: 15rpx;
+}
+
+.bottom{
+    width: 750rpx;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30rpx;
+    color: #999999;
+}

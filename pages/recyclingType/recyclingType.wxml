@@ -1,0 +1,29 @@
+<!--pages/recyclingType/recyclingType.wxml-->
+
+<wxs src="./../tools.wxs" module="tools" />
+<block wx:for="{{categories}}" wx:for-item="category" wx:key="id">
+  <view class="panel-category">
+    <text>{{category.name}}</text>
+  </view>
+  <view class="panel-subCategory">
+    <block wx:for="{{category.childList}}" wx:for-item="subCategory" wx:for-index="idx" wx:key="id">
+      <view class="subCategory-item {{tools.showBorderBottom(category.childList, idx) ? 'subCategory-bottom' : ''}}" catchtap="{{toChoose ? 'chooseRecyclingType' : 'chooseRecyclingType'}}" data-subcategory="{{subCategory}}">
+        <image class="subCategory-pic" src="{{subCategory.picUrl}}"></image>
+        <view class="subCategory-name">{{subCategory.name}}</view>   
+        <view class="panel-mask" wx:if="{{tools.checkElement(chosenRecyclingTypes, subCategory)}}">
+          <view class=""></view>
+          <image src="../../images/pic-checked.png"></image>
+        </view>        
+      </view>           
+    </block>  
+  </view>
+</block>
+<view class="panel-bottom"></view>
+<view wx:if="{{toChoose}}" class="panel-operation" bindtap="comfirmChosenTypes">
+  <button class="btn-opertion" type="primary" size="default" loading="{{loading}}">确认选中</button>
+</view>
+<view wx:else class="panel-operation" bindtap="onlineReservation">
+  <button class="btn-opertion" type="primary" size="default" loading="{{loading}}">预约回收</button>
+</view>
+
+

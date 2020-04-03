@@ -1,0 +1,56 @@
+<!--pages/onlineReservation/onlineReservation.wxml-->
+
+ <wxs src="./../tools.wxs" module="tools" />
+<!--顶部导航栏-->
+<view class="status-box"> 
+  <view class="status-item {{currentStatus == 1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待处理</view>
+  <view class="status-item {{currentStatus == 2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已处理</view>
+  <view class="status-item {{currentStatus == 0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view> 
+</view>
+
+<view class="order-list"> 
+  <block wx:for="{{onlineReservationList}}" wx:key="id" wx:for-item="reservation">
+    <view class="panel-order" data-id="{{reservation.id}}" mut-bind:tap="{{reservation.status == 1 ? 'editOnlineReservation' : 'lookOnlineReservation'}}">  
+      <view class="order-title">
+        <view class="section-wrapper">
+          <view class="order-type">{{tools.recyclingTypesStr(reservation.recycleTypeJson)}}</view>
+          <image class="order-looking" src="../../images/right-black.png" ></image>
+        </view>        
+        <view class="order-status">{{tools.reservationStatusName(reservation.status)}}</view>
+      </view>
+      <view class="order-time">
+        <view>{{reservation.sCreatedAt}}</view>
+      </view>
+      <view class="order-opertate">
+        <view class="operate-btn" wx:if="{{reservation.status == 1}}" data-id="{{reservation.id}}" mut-bind:tap="editOnlineReservation">编辑</view>
+        <picker class="operate-btn" wx:if="{{reservation.status == 2}}" data-id="{{reservation.id}}" mut-bind:tap="" bind:change="cancleOnlineReservation" value="{{reasonIndex}}" 
+        range="{{reasonArray}}">
+          取消
+        </picker>          
+        <!-- cancleOnlineReservation -->
+        <view class="operate-btn" wx:if="{{reservation.status == 4 || reservation.status == 5}}" data-id="{{reservation.id}}" mut-bind:tap="deleteOnlineReservation">
+        删除</view>
+        <view class="operate-btn" wx:if="{{reservation.status == 4 || reservation.status == 5}}" data-id="{{reservation.id}}" mut-bind:tap="reOnlineReservation" >再次预约</view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{onlineReservationList.length > 0}}">
+    <view wx:if="{{noMore}}" class="panel-noMore">
+      ~ o(╯□╰)o 没有更多数据啦 ~ 
+    </view>
+    <view class="panel-bottom"></view>
+  </block>
+  <block wx:else>
+    <image class="empty-image" src="../../images/empty.png"></image>
+  </block>
+</view>
+
+<view class="addOnlineReservation" bindtap="addAddress">
+  <button class="btn-addOnlineReservation" type="primary" size="default" loading="{{loading}}" bindtap="addOnlineReservation">新增预约</button>
+</view>
+
+
+
+
+
+

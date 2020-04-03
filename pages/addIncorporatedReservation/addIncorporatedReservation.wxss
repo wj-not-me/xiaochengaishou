@@ -1,0 +1,107 @@
+/* pages/addIncorporatedReservation/addIncorporatedReservation.wxss */
+
+.panel-fillForm {
+  width: 100vw;
+  height: 400rpx;
+  background: pink;
+}
+.panel-uploadPic {
+  width: 100vw;
+  height: 600rpx;
+  background: steelblue;
+}
+.panel-chooseCategory { 
+  width: 100vw;
+	height: 700rpx; 
+	box-sizing: border-box;
+  display: flex;
+}
+.rel {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.category-container {
+  width: 180rpx;
+  height: 100%;
+	background: #E9EAEC;
+}
+
+.category-item {
+  height: 100rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight:500;
+  color:rgba(73,80,96,1);
+  padding-left: 30rpx;
+}
+
+.category-item-selected {
+  background: #ffffff;
+  color:rgba(255,123,35,1);
+  /* border-left: 4rpx solid rgba(255,123,35,1); */
+}
+
+.subCategory-container {
+  width: 570rpx;
+  height: 100%;
+  background: #ffffff;	
+}
+
+.subCategory-title {
+  width: 570rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 10rpx 30rpx;
+  line-height: 26rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+  color:rgba(128,132,143,1);
+}
+
+.rel .category-group:first-child .subCategory-title {
+  position: fixed;
+  top: 0;
+}
+
+.subCategory-item {
+  height: 138rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 50rpx;
+}
+
+.category-group:first-child>.subCategory-item:nth-child(2) {
+  height: 184rpx;
+  padding-top: 46rpx; 
+}
+
+.subCategory-item-pic {
+  width: 120rpx;
+  height: 90rpx;
+  margin-right: 35rpx;
+}
+
+.subCategory-item-name {
+  width: 260rpx;
+  margin-right: 35rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+  color:rgba(128,132,143,1);
+}
+
+.subCategory-item-add {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.panel-cart {
+  width: 100vw;
+  height: 100rpx;
+  background: red;
+}

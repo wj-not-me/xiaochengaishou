@@ -1,0 +1,179 @@
+/* pages/address/address.wxss */
+.address-list {
+   width: 100vw;
+}
+
+.addressPanel {
+  width: 100vw;
+  min-height: 298rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.infoWrapper {
+  width: 100vw;
+  min-height: 217rpx;
+  border-bottom: 1px solid rgba(233,234,236,1);
+  overflow: hidden; 
+}
+
+.info-contact {
+  font-size: 30rpx;
+  font-weight: 400;
+  color: rgba(73,80,96,1);  
+  margin-left: 30rpx;
+  margin-top: 30rpx;  
+  display: flex;                     
+}
+
+.info-contact>view:first-child {
+  max-width: 300rpx;
+  margin-right: 40rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap; 
+}
+
+.info-community-address {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(128,132,143,1);  
+  margin: 20rpx 30rpx;
+  word-break: break-all;
+  /* display: flex; */
+}
+
+/* .info-community-address>view:first-child {
+  margin-right: 20rpx;
+}
+
+.info-community-address .info-community {
+  max-width: 200rpx;
+  margin-right: 40rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap; 
+}
+
+.info-community-address .info-address {
+  max-width: 400rpx;
+  margin-right: 40rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap; 
+} */
+
+.info-provinceCity {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(128,132,143,1);  
+  margin-left: 30rpx;
+  margin-top: 20rpx;  
+  display: flex;
+}
+
+.info-provinceCity>view:first-child {
+  margin-right: 20rpx;
+}
+
+.button-choose {
+  width: 104rpx;
+  height: 44rpx;
+  border-radius: 8rpx;
+  border: 1px solid rgba(221, 222, 225, 1);
+  font-size: 20rpx;
+  font-weight: 400;
+  color: rgba(73,80,96,1);
+  line-height: 46rpx;
+  text-align: center;
+  position: absolute;
+  margin-top: -187rpx;
+  margin-left: 614rpx;
+}
+
+.image-choosen {
+  width: 36rpx;
+  height: 26rpx;
+  position: absolute;
+  margin-top: -187rpx;
+  margin-left: 684rpx;
+}
+
+.operationWrapper {
+  width: 100vw;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.defaultAddress {
+  width: 200rpx;
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(255,123,35,1);
+  margin-left: 30rpx;
+}
+
+.operation {
+  margin-right: 30rpx;
+  height: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center
+}
+
+.operation-edit, .operation-delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.operation-delete {
+  margin-left: 25rpx;
+}
+
+.operationIcon {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.operationName {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(73,80,96,1);
+  margin-left: 7rpx;
+}
+
+.addAddress {
+  width: 100vw;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+}
+
+.panel-bottom {
+  width: 100vw;
+  height: 118rpx;
+}
+
+
+.btn-addAddress {
+  height: 98rpx;
+  background-color: rgba(255,123,35,1) !important;
+  font-size:30rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height: 98rpx;
+  border-radius: 0;
+}
+
+.empty-image {
+  width: 374rpx;
+  height: 288rpx;
+  margin-top: 426rpx;
+  margin-left: 196rpx;
+}

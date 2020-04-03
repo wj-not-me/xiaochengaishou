@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<view class="banner">
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" duration="1000" indicator-color="#cccccc" indicator-active-color="#FF7B23">
+    <block wx:for="{{bannerList}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item.pictureUrl}}" data-url="{{item.url}}" class="banner-image" mode="scaleToFill"  bindtap="showNews"/>
+        <!-- <text>垃圾分类回收流程是什么?</text> -->
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='navs'>
+  <view class='nav-item' bindtap="onlineReservation">
+    <image src="/images/reserveRecycle.png" class="nav-image" ></image>
+    <text>预约回收</text>
+  </view>
+  <view class='nav-item'>
+    <image src="/images/phoneRecycle.png" class="nav-image" bindtap="phoneReservation"></image>
+    <text>电话预约</text>
+  </view>
+  <view class='nav-item' bindtap="recyclingType">
+    <image src="/images/recycleType.png" class="nav-image"></image>
+    <text>回收类型</text>
+  </view>
+  <view class='nav-item' bindtap="guidingPrice">
+    <image src="/images/guidePrice.png" class="nav-image"></image>
+    <text>指导价格</text>
+  </view>
+</view>
+<view class="home-bottom">
+<!-- incorporatedReservation -->
+  <view class="home" bindtap="showNews">
+    <image class="img" src="/images/publicOversight@3x.png"></image>
+    <view class="view-line"></view>
+    <view class="home-info">
+      <view class="name" >公众监督</view>
+      <view class="sales">800-258-3695</view>
+    </view>
+    <view class="home-numb">
+      <image class='right-img' src='/images/下一步 拷贝 3.png'></image>
+    </view>
+  </view>
+  <!-- testPay -->
+  <view class="home" bindtap="showNews">
+    <image class="img" src="/images/eventEntrance@3x.png"></image>
+    <view class="view-line"></view>
+    <view class="home-info">
+      <view class="name">活动入口</view>
+      <view class="sales">参与活动,为环保做贡献</view>
+    </view>
+    <view class="home-numb">
+      <image class='right-img' src='/images/下一步 拷贝 3.png'></image>
+    </view>
+  </view>
+
+  <view class="home" bindtap="showNews">
+    <image class="img" src="/images/remoteWarranty@3x.png"></image>
+    <view class="view-line"></view>
+    <view class="home-info">
+      <view class="name">远程保修</view>
+      <view class="sales">选择最近的服务网点申请保修</view>
+    </view>
+    <view class="home-numb">
+      <image class='right-img' src='/images/下一步 拷贝 3.png'></image>
+    </view>
+  </view>
+</view>
+<view class="mask" wx:if="{{showClause}}"></view>
+<view class="clause" wx:if="{{showClause}}">
+ <scroll-view class="clause-scroll" scroll-y="true" scroll-anchoring="true" enable-flex="true">
+  <view class="clause-title">{{clauseData.name}}</view>
+  <view class="clause-content">
+    {{clauseData.clause}}
+  </view>  
+  <view class="clause-button" bindtap="agreeClause">
+    同意本条款，下次不再提醒
+  </view>
+ </scroll-view>
+  
+</view>

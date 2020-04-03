@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "预约回收",
+  "backgroundColor": "#F0F0F0",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100
+} 

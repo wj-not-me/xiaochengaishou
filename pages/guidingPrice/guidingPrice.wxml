@@ -1,0 +1,37 @@
+<!--pages/guidingPrice/guidingPrice.wxml-->
+<view class="panel-notice" wx:if="{{showNotice}}" bindtap="closeNotice">
+  指导价格仅供参考，最终价格，以上门回收的成交价为准。
+  <image class="close-notice"  src="../../images/close.png"></image>
+</view>
+<view class="panel-updateTime">
+  {{'更新于 ' + updateTime}}
+</view>
+<view class="panel-content">
+  <view class="section-wrapper" wx:for="{{gudingPriceList}}" wx:key="address">
+  <view class="panel-title">
+    <view class="title-name-tel"><text space="nbsp">{{item.name}}   </text><text space="nbsp">{{item.phone}}</text></view> 
+    <view class="title-street-address" wx:if="{{item.street || item.address}}"><text space="nbsp">{{item.street}}   {{item.address}}</text></view>  
+    <view class="tilte-th">
+      <view class="title-th-name">回收类型</view>
+      <view class="title-th-price">回收单价</view>
+    </view>
+  </view>
+  <block wx:for="{{item.list}}" wx:key="id" wx:for-item="category">
+    <view class="panel-section">  
+      <!-- <view class="panel-category">{{category.name}}</view> -->
+      <block wx:for="{{category.childList}}" wx:key="id" wx:for-item="subCategory">
+        <view class="panel-subCategory-price">
+          <view class="panel-subCategory">{{subCategory.name}}</view>
+          <view class="panel-price">
+            <view>{{subCategory.price ? subCategory.price : 0 }}</view>
+            <view>元/公斤</view>
+          </view>
+        </view>
+      </block>  
+     </view>
+    </block>
+  </view>
+</view>
+<view class="panel-bottom"></view>
+
+

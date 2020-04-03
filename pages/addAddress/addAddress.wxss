@@ -1,0 +1,157 @@
+/* pages/addAddress/addAddress.wxss */
+
+.inputPanel {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.inputLabel {
+  width: 170rpx;
+  margin-left: 30rpx;
+  font-size: 26rpx;
+  font-weight: 400;
+  color:rgba(128,132,143,1);
+  display: flex;
+}
+
+.inputLabel .necessary {
+  width: 20rpx;
+  color: red;
+}
+
+.inputContent {
+  width: 450rpx;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(73,80,96,1);
+}
+
+.inputContent-placeholder {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: rgba(187,190,196,1);
+}
+
+.panel-userName, .panel-address { 
+  height: 80rpx;
+  background: #fff;
+  border-bottom: 1rpx solid rgba(233,234,236,1);
+  margin-top: 20rpx;
+}
+
+.panel-address {
+  position: relative;
+}
+
+.panel-address picker {
+  width: 510rpx;
+}
+
+.panel-address image {
+  position: absolute;
+  width: 12rpx;
+  height: 20rpx;
+  margin-left: 678rpx;
+}
+
+.icon-location {
+  width: 30rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 30rpx;
+}
+
+.panel-phoneNo, .panel-community, .panel-fullAddress {
+  height: 80rpx;
+  background: #fff;
+}
+
+.panel-community {
+  border-bottom: 1rpx solid rgba(233,234,236,1);
+}
+
+.panel-community image {
+  width: 12rpx;
+  height: 20rpx;
+  padding: 30rpx 58rpx 30rpx 10rpx;
+}
+
+.panel-addressLabel, .panel-setDefault {
+  height: 80rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.panel-addressLabel .inputContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.habitation, .company {
+  width: 120rpx;
+  height: 48rpx;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  font-weight: 400;
+  line-height: 48rpx;
+  text-align: center;
+}
+
+.company {
+  margin-left: 24rpx;
+}
+
+.addressLabel { 
+  background :rgba(73,80,96,0);
+  border: 1px solid rgba(221, 222, 225, 1);
+  color: rgba(128,132,143,1);
+}
+
+.checkedAddressLabel {
+  background: rgba(255,123,35,1);
+  border: 1px solid rgba(255,123,35,1);
+  color: rgba(255,255,255,1);
+}
+
+.setDefaultAddress {
+  color: rgba(255,123,35,1);
+}
+
+.panel-saveAddress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-save {
+  width: 100vw;
+  height: 98rpx;
+  background-color: rgba(255,123,35,1) !important;
+  font-size:30rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height: 98rpx;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
+.hiddenInput {
+  width: 20rpx;
+  z-index: -999;
+}
+
+.panel-test {
+  height: 80rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+
+

@@ -1,0 +1,21 @@
+<!--pages/phoneReservation/phoneReservation.wxml-->
+    <block wx:for="{{addressPhoneNoArray}}" wx:key="id">
+      <view class="section_wrapper">
+        <view class="section_address">
+          <image class="section_garbageImage" src="../../images/glass.png" mode="scaleToFill"></image>
+          <view class="section_district_garbage">
+            <view class="district">{{item.districtName}}</view>
+            <view class="garbage">{{item.content}}</view>
+          </view>
+        </view>
+        <view class="section_phone" data-telno="{{item.phone}}" bindtap="tel">
+          <image class="image_telephone" src="../../images/icon-telephone.png" mode="scaleToFill"></image>
+          <text class="phoneNo">{{item.phone}}</text>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{noMore}}" class="bottom">
+      <view class="bottom_content">
+        ~ o(╯□╰)o 没有更多数据啦 ~
+      </view>
+    </view>

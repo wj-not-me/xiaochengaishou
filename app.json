@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/recycle/recycle",
+    "pages/phoneReservation/phoneReservation",
+    "pages/personal/personal",
+    "pages/recyclingType/recyclingType",
+    "pages/address/address",
+    "pages/addAddress/addAddress",
+    "pages/onlineReservation/onlineReservation",
+    "pages/addOnlineReservation/addOnlineReservation",
+    "pages/guidingPrice/guidingPrice",
+    "pages/authorize/authorize",
+    "pages/account/account",
+    "pages/incorporatedReservation/incorporatedReservation",
+    "pages/addIncorporatedReservation/addIncorporatedReservation",
+    "pages/testPay/testPay",
+    "pages/news/news",
+    "pages/recycleBin/recycleBin",
+    "pages/community/community"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小橙爱收",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/首页_未点击@3x.png",
+        "selectedIconPath": "/images/首页_点击@3x.png"
+      },
+      {
+        "pagePath": "pages/recycle/recycle",
+        "text": "回收",
+        "iconPath": "/images/回收_未点击@3x.png",
+        "selectedIconPath": "/images/回收_点击@3x.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/images/我的_未点击@3x.png",
+        "selectedIconPath": "/images/我的_点击@3x.png"
+      }
+    ],
+    "selectedColor": "#FF7B23"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

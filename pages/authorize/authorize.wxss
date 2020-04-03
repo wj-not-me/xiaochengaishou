@@ -1,0 +1,21 @@
+/* pages/authorize/authorize.wxss */
+
+page {
+  background: #fff
+}
+
+.imageAuthorize {
+  width: 750rpx;
+  height: 920rpx;
+}
+
+.btnAuthorize {
+  width: 520rpx;
+  height: 100rpx;
+  background: #FF7B23 !important;
+  padding: 0;
+  color: #fff !important;
+  font-size: 30rpx;
+  font-weight: 500;
+  line-height: 100rpx;
+}

@@ -1,0 +1,169 @@
+<!--pages/addOnlineReservation/addOnlineReservation.wxml-->
+
+<wxs src="./../tools.wxs" module="tools" />
+<view class="panel-choose">
+  <block wx:if="{{!recyclingAddress}}">
+    <view  class="choose-recyclingaAddress" bindtap="chooseRecyclingaAddress">
+      <text>请选择地址</text>
+      <image src="../../images/right-orange.png"></image>
+    </view>
+  </block>
+  <block wx:else> 
+    <view  class="chosen-recyclingAddress" bindtap="{{look ? '' : 'chooseRecyclingaAddress'}}">
+      <image class="right-orange" src="../../images/right-orange.png" wx:if="{{!look}}"></image>   
+       <view class="chosen-contact">
+        <view>{{recyclingAddress.name}}</view>
+        <view>{{recyclingAddress.mobile}}</view>
+      </view>
+      <view class="chosen-provinceCity">     
+        <view wx:if="{{recyclingAddress.provinceName}}">{{recyclingAddress.districtName + ' ' + recyclingAddress.subdistrictName}}</view> 
+        <!-- <text>{{recyclingAddress.address}}</text> -->
+      </view>
+      <view class="chosen-community-address">
+        <text space="nbsp">{{recyclingAddress.communityName ? recyclingAddress.communityName + '   ' : ''}}{{recyclingAddress.address}}</text>
+        <!-- <view class="chosen-community" wx:if="{{recyclingAddress.communityName}}">{{recyclingAddress.communityName}}</view> -->
+        <!-- <text>{{recyclingAddress.committeeName}}</text> -->
+        <!-- <view class="chosen-address">{{recyclingAddress.address}}</view> -->
+      </view>      
+    </view> 
+  </block>
+</view>
+
+<view class="panel-way">
+  <text class="inputLabel">交投方式</text>
+  <view class="inputContent">
+    <view class="online {{sel_way == 1 ? 'checkedWayLabel' : 'wayLabel'}}" data-idx="1" bindtap="{{!look ? 'selectWay' : ''}}">预约上门</view>
+    <view class="selfDeliver {{sel_way == 2 ? 'checkedWayLabel' : 'wayLabel'}}" data-idx="2" bindtap="{{!look ? 'selectWay' : ''}}">自送</view>
+    <!-- <input name="addressLabel" value="{{sel_addressLabel}}" class="hiddenInput"></input> -->
+  </view>
+</view>
+<view class="panel-time" wx:if="{{sel_way == 1}}">
+  <text class="inputLabel">预约上门</text>
+  <view wx:if="{{look && (status == 4 || status == 5 || status == 0)}}" class="inputContent">{{reserveDate + ' ' + reserveTime}}</view>
+  <block wx:elif="{{look && (status == 1 || status == 2 || status == 3)}}">
+    <picker class="inputContent" mode="multiSelector" value="{{sel_time}}" range="{{timeArray}}" name="time" bindchange="changeTime" bindcolumnchange="bindMultiPickerColumnChange">
+      <view class="picker">
+        {{timeArray[0][sel_time[0]]}} {{timeArray[1][sel_time[1]]}}
+      </view>             
+    </picker>
+    <view class="button-edit">修改</view>
+  </block>
+  <block wx:else>
+    <picker class="inputContent" mode="multiSelector" value="{{sel_time}}" range="{{timeArray}}" name="time" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange">
+      <view class="picker">
+        {{timeArray[0][sel_time[0]]}} {{timeArray[1][sel_time[1]]}}
+      </view>             
+    </picker>
+    <image src="../../images/right-black.png"></image>
+  </block> 
+</view>
+<view class="panel-recycleBin"  wx:if="{{sel_way == 2}}" bindtap="{{!look ? 'chooseRecycleBin' : ''}}">
+  <text class="inputLabel">回收站场</text>
+  <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="选择回收站场" name="recyclingBinName" value="{{recyclingBin.name}}" disabled />
+  <image src="../../images/right-black.png" wx:if="{{!look}}"></image>
+</view>
+<view class="panel-recycleBin-address" wx:if="{{sel_way == 2}}">
+  <text class="inputLabel">站场地址</text>
+  <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="" name="recyclingBinAddress" value="{{recyclingBin.address}}" disabled />
+</view>
+<view  class="panel-recyclingTypes" bindtap="{{!look ? 'chooseRecyclingTypes' : ''}}">
+  <text class="inputLabel">回收类型</text>
+  <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="选择回收类型" name="recyclingTypes" 
+  value="{{tools.recyclingTypesStr(recyclingTypes)}}" disabled />
+  <image src="../../images/right-black.png" wx:if="{{!look}}"></image>
+</view>
+<view wx:if="{{recyclingTypes != [] && recyclingTypes != '' }}" class="panel-recyclingTypes-detail">
+  <view class="recyclingTypes-detail-title">
+    <view class="detail-title-name">回收类型</view>
+    <view class="detail-title-price">单价（kg）</view>
+  </view>
+  <view class="recyclingTypes-detail-item" wx:for="{{recyclingTypes}}" wx:key="id">
+    <view class="detail-item-name">{{item.name}}</view>
+    <view class="detail-item-price">￥ {{item.price}}</view>
+  </view>
+</view>
+<view class="panel-weight">
+  <text class="inputLabel">预估量</text>
+  <input class="inputContent" type="digit" placeholder-class="inputContent-placeholder" placeholder="输入预估重量" name="weight" value="{{weight}}" disabled="{{look}}"bindblur="formateWeight"/>
+  <text class="inputUnit">kg</text>
+</view>
+<view class="panel-tips">
+  <text class="inputLabel">备注</text>
+  <textarea  class="inputContent" placeholder-class="inputContent-placeholder" show-confirm-bar="" placeholder="{{look ? '' : '输入备注（回收重量少于5kg需要收取5元服务费）'}}" name="tips" value="{{tips}}" disabled="{{look}}" bindinput="inputTips"/>
+</view>
+
+<view class="panel-uploadPic">
+  <view class="uploadPic-title">
+    <text>图片上传</text>
+  </view>
+  <view class="uploadPic-content">
+    <block wx:for="{{newImages}}" wx:key="*this">
+      <image class="pic-item" src="{{item}}" bindtap="{{look ? 'previewPic' : 'operatePic'}}" data-url="{{item}}" data-urls="{{newImages}}"></image>
+    </block>
+    <image wx:if="{{newImages.length < 12 && !look}}" class="pic-item pic-add" src="../../images/pic-add.png" bindtap="uploadPic"></image>
+  </view>
+</view>
+
+<block wx:if="{{look && status === 5 }}">
+  <view class="panel-reason">
+  <text class="inputLabel">取消理由</text>
+  <view class="inputContent">{{reason}}</view>
+</view>
+</block>
+
+<block wx:if="{{look && (status == 4)}}">
+  <view class="panel-person">
+    <text class="inputLabel">回收人员</text>
+    <input class="inputContent" type="text" placeholder-class="inputContent-placeholder" placeholder="" name="handler" value="{{handler}}" disabled="{{look}}"/>
+  </view>
+  <view class="panel-tel">
+    <text class="inputLabel">联系电话</text>
+    <input class="inputContent" type="digit" placeholder-class="inputContent-placeholder" maxlength="11"  placeholder="" name="handlerPhone" value="{{handlerPhone}}" disabled="{{look}}" bindblur="formateWeight"/>
+  </view>
+  <view class="panel-image panel-uploadPic">
+    <view class="image-title uploadPic-title">
+       <text>回收图片</text>
+    </view>
+    <view class="image-content uploadPic-content">
+      <block wx:for="{{picUrlHandleList}}" wx:key="*this">
+        <image class="pic-item" src="{{item}}" bindtap="{{look ? 'previewPic' : 'operatePic'}}" data-url="{{item}}" data-urls="{{picUrlHandleList}}"></image>
+      </block>
+    </view>
+  </view>
+  <view class="panel-statistics">
+    <view class="statistics-title">
+      <text>回收物统计</text>
+    </view>
+    <view class="statistics-content">
+      <block wx:for="{{recycleHandleJson}}" wx:key="id">      
+        <view class="statistics-content-item">
+          <view class="statistic-contents-item-name">{{item.name}}</view>
+          <view class="statistics-content-item-weight">{{item.weight + item.unit}}</view>
+          <view class="statistics-content-item-amount">{{'￥ ' + item.amount}}</view>
+        </view>
+      </block>   
+    </view>
+    <view class="statistics-footer">
+      <text class="statistics-footer-title">总计 ￥</text>
+      <text class="statistics-footer-content">{{totalPrice}}</text>
+    </view>
+  </view>
+</block>
+
+<view class="panel-bottom"></view>
+<view class="panel-operation" wx:if="{{!look}}">
+    <button class="btn-save" type="primary" size="default" bindtap="saveOnlineReservation" data-status="1"> 暂存 </button>
+    <button class="btn-submit" type="primary" size="default" bindtap="saveOnlineReservation" data-status="2"> 提交 </button>
+</view>
+
+<view class="reOnlineReservation" wx:if="{{look && (status == 4 || status == 5)}}">
+  <button class="btn-reOnlineReservation" type="primary" size="default" loading="{{loading}}" data-id="{{id}}" bindtap="reOnlineReservation">再次预约</button>
+</view>
+
+ <picker class="cancleOnlineReservation" wx:if="{{look && status == 2}}" data-id="{{id}}" bindchange="cancleOnlineReservation" value="{{reasonIndex}}" 
+ range="{{reasonArray}}">
+    <button class="btn-cancleOnlineReservation" type="primary" size="default" loading="{{loading}}" data-id="{{id}}">取消</button>
+</picker>   
+
+
+
