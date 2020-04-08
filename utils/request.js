@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://hths.chi4rec.com.cn' + '/appapi/app'; //http://192.168.1.86:5042
+const API_BASE_URL = 'http://192.168.1.86:5042' + '/appapi/app'; //https://hths.chi4rec.com.cn
  
 /**
  * 简单封装POST请求

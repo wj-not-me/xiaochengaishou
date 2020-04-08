@@ -3,9 +3,9 @@
   <view class="login">
     <image class="bg-image" src="../../images/myBackground@3x.png" background-size="cover"></image>
     <view class="user-info">
-      <view class="user-info-nickname" bindtap="{{userInfo ? 'loginOut' : 'loginIn'}}">{{ userInfo ? userInfo.nickName : '点击登录'}}</view>
-      <!-- <view class="user-info-phoneNo">18896586232</view> -->
-      <image class="user-info-avatar" src="{{userInfo ? userInfo.avatarUrl : '../../images/default-avatar@3x.png'}}" bindtap="{{userInfo ? 'loginOut' : 'loginIn'}}">
+      <view class="user-info-nickname" bindtap="{{userName ? 'loginOut' : 'loginIn'}}">{{ userName ? userName : '点击登录'}}</view>
+      <view class="user-info-phoneNo">{{ phoneNo ? phoneNo : ''}}</view>
+      <image class="user-info-avatar" src="{{avatarUrl ? avatarUrl : '../../images/default-avatar@3x.png'}}" bindtap="{{userName ? 'loginOut' : 'loginIn'}}">
         <button open-type="getUserInfo"/>
       </image>
     </view>

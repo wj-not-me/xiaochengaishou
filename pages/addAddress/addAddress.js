@@ -43,7 +43,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+   
     if (options.id) {
       wx.setNavigationBarTitle({
         title: '编辑地址'
@@ -53,6 +53,10 @@ Page({
       });
       this._initModel(options.id);
     } else {
+      this.setData({
+        [`model.mobile`]: wx.getStorageSync('phoneNo')
+      })
+      
       this._initCityData();
        // 实例化API核心类
       qqmapsdk.reverseGeocoder({

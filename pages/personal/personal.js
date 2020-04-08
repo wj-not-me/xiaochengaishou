@@ -7,7 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    // userInfo: {}
+    userName: '',
+    phoneNo: '',
+    avatarUrl: ''
   },
 
   /**
@@ -29,7 +32,8 @@ Page({
    */
   onShow: function () {
     this.setData({
-      userInfo: wx.getStorageSync('userInfo')
+      userName: wx.getStorageSync('userName'),
+      phoneNo: wx.getStorageSync('phoneNo')
     });
   },
 

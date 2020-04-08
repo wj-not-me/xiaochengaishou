@@ -14,7 +14,43 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    const login = new Promise((resolve, reject) => {
+      wx.login({
+        success: loginRes => { 
+          wx.request({
+            url:  API_BASE_URL + '/LoginHS', 
+            method: 'POST',
+            data: {
+              code: loginRes.code, // 临时登录凭证                          
+            },
+            success: res => {
+              wx.setStorageSync('token', res.data.data.token);
+              resolve(res.data.data.token);
+            },
+            fail: error => { reject(error) }
+          });
+        } 
+      })
+    });
+
+    login.then(res => {
+      getCityList(res);
+    });
+
+    //获取省-市-区-街道
+    const getCityList = function (token) {
+      fetchPostRequest('/GetRegionHS').then(res => {
+        if (res.data.code != 0) {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none',
+            duration: 3000
+          });
+          return;
+        }
+        wx.setStorageSync('cityList', res.data.data.list);
+      });
+    };
   },
 
   /**
@@ -71,22 +107,34 @@ Page({
    */
   getPhoneNumber: function (e) {
     var that = this;
-    console.log(e.detail.errMsg == "getPhoneNumber:ok");
+    // console.log(e.detail.errMsg == "getPhoneNumber:ok");
     if (e.detail.errMsg == "getPhoneNumber:ok") {
-      const iv = e.detail.encryptedData
-      // wx.request({
-      //   url: 'http://localhost/index/users/decodePhone',
-      //   data: {
-      //     encryptedData: e.detail.encryptedData,
-      //     iv: e.detail.iv,
-      //     sessionKey: that.data.session_key,
-      //     uid: "",
-      //   },
-      //   method: "post",
-      //   success: function (res) {
-      //     console.log(res);
-      //   }
-      // })
+      wx.request({
+        url: API_BASE_URL + '/GetWXPhone',
+        data: {
+          encryptedData: e.detail.encryptedData,
+          iv: e.detail.iv,
+          token: wx.getStorageSync('token')
+        },
+        method: "post",
+        success: function (res) {
+          // console.log(res);
+          wx.setStorageSync('userName', res.data.data.name);
+          wx.setStorageSync('phoneNo', res.data.data.phone);
+          wx.navigateBack({ delta: 1 });        
+        }
+      })
+    }
+    else {
+      wx.showModal({
+        title: '授权失败',
+        content: '您已拒绝获取微信绑定手机号登录授权',
+        showCancel: false,
+        confirmText: '知道了',
+        success: res => {  
+          console.log(res);   
+        }
+      })
     }
   },
 

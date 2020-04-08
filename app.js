@@ -1,30 +1,45 @@
 //app.js
-import api from '/utils/request.js';
+import {fetchPostRequest, API_BASE_URL} from './utils/request';
 App({
   onLaunch: function () {
-    // wx.login({
-    //   success: loginRes => { 
-    //     wx.request({
-    //       url: 'http://192.168.1.86:5042/appapi/app/LoginHS', //  
-    //       method: 'POST',
-    //       data: {
-    //         code: loginRes.code, // 临时登录凭证   
-    //         //iv: iv //                        
-    //       },
-    //       success: res => {
-    //         wx.setStorageSync('token', res.data.token);
-    //         console.log('aaaa')
-    //         // res = res.data;
-    //         // if (res.status == 0) {
-    //         //   resolve({ 'token': res.data.token});
-    //         // } else {
-    //         //   reject(res.msg);
-    //         // }
-    //       },
-    //       fail: error => { reject(error) }
-    //     });
-    //   } 
-    // })
+    // const login = new Promise((resolve, reject) => {
+    //   wx.login({
+    //     success: loginRes => { 
+    //       wx.request({
+    //         url:  API_BASE_URL + '/LoginHS', 
+    //         method: 'POST',
+    //         data: {
+    //           code: loginRes.code, // 临时登录凭证                          
+    //         },
+    //         success: res => {
+    //           wx.setStorageSync('token', res.data.data.token);
+    //           resolve(res.data.data.token);
+    //         },
+    //         fail: error => { reject(error) }
+    //       });
+    //     } 
+    //   })
+    // });
+
+    // login.then(res => {
+    //   getCityList(res);
+    // });
+
+    // //获取省-市-区-街道
+    // const getCityList = function (token) {
+    //   fetchPostRequest('/GetRegionHS').then(res => {
+    //     if (res.data.code != 0) {
+    //       wx.showToast({
+    //         title: res.data.msg,
+    //         icon: 'none',
+    //         duration: 3000
+    //       });
+    //       return;
+    //     }
+    //     wx.setStorageSync('cityList', res.data.data.list);
+    //   });
+    // };
+   
   },
 
   /**
@@ -36,13 +51,14 @@ App({
       wx.checkSession({ //检查session_key是否过期
         success: () => { //有效
           //从storage中获取用户信息
-          if (!wx.getStorageSync('userInfo')) {
+          if (!wx.getStorageSync('phoneNo')) {
             wx.showToast({
               title: '用户缓存信息缺失',
               icon: 'none',
               duration: 1500,
               mask: true
-            })
+            });
+            this.goLoginPageTimeOut();
           } 
         },
         fail: () => {//过期

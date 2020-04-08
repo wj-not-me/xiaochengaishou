@@ -19,7 +19,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -73,7 +73,8 @@ Page({
       content: '确认退出登录？',
       success(res) {
         if (res.confirm) {
-          wx.removeStorageSync('userInfo');
+          wx.removeStorageSync('userName');
+          wx.removeStorageSync('phoneNo');
           wx.removeStorageSync('token');
           wx.navigateBack({
             delta: 1
