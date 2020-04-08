@@ -22,7 +22,7 @@ Page({
   },
 
   onLoad: function() {
-    let that = this;
+    // let that = this;
     app.checkLoginStatus();
     //获取首页banner和契约条款内容
     fetchPostRequest('/GetRecoveryBannerHS').then( res =>  {

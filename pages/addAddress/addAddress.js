@@ -1,7 +1,7 @@
 // pages/addAddress/addAddress.js
 
 const app = getApp();
-const api = require('../../utils/request.js');
+const api = require('../../utils/request.js').default;
 //引入SDK核心类
 import QQMapWX from '../../libs/qqmap-wx-jssdk.min'
 var qqmapsdk = new QQMapWX({
