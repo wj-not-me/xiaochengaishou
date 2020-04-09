@@ -9,6 +9,15 @@
     <view class="inputLabel"><view class="necessary">*</view>手机号码</view>
     <input class="inputContent" type="number" placeholder-class="inputContent-placeholder" maxlength="11" placeholder="输入预约回收人手机号码" name="mobile" value="{{model.mobile}}"/>
   </view>
+  <view class="panel-community inputPanel">
+    <view class="inputLabel"><view class="necessary"></view>小区/单位名</view>
+    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入小区或单位名字" name="communityName" value="{{model.communityName}}" />
+    <image src="../../images/right-black.png" bindtap="chooseCommunity"></image>
+  </view>
+  <view class="panel-fullAddress inputPanel">
+    <view class="inputLabel"><view class="necessary">*</view>详细地址</view>
+    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入详细地址，如道路、门牌号" name="address" value="{{model.address}}" />
+  </view>
   <view class="panel-address inputPanel">
     <view class="inputLabel"><view class="necessary"></view>所在地区</view>
     <view class="inputContent">
@@ -29,15 +38,6 @@ value="{{sel_distinctIndex}}" range="{{distinctArray}}" range-key="name" name="c
     <text class="inputLabel">所属居委会</text>
     <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入居委会名" name="committeeName" value="{{model.committeeName}}" />
   </view> -->
-  <view class="panel-community inputPanel">
-    <view class="inputLabel"><view class="necessary"></view>小区/单位名</view>
-    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入小区或单位名字" name="communityName" value="{{model.communityName}}" />
-    <image src="../../images/right-black.png" bindtap="chooseCommunity"></image>
-  </view>
-  <view class="panel-fullAddress inputPanel">
-    <view class="inputLabel"><view class="necessary">*</view>详细地址</view>
-    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入详细地址，如道路、门牌号" name="address" value="{{model.address}}" />
-  </view>
   <!-- <view class="panel-addressLabel inputPanel">
     <text class="inputLabel">标签</text>
     <view class="inputContent">

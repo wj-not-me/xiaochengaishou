@@ -1,7 +1,7 @@
 // pages/addAddress/addAddress.js
 
 const app = getApp();
-const api = require('../../utils/request.js').default;
+import {fetchPostRequest} from '../../utils/request'
 //引入SDK核心类
 import QQMapWX from '../../libs/qqmap-wx-jssdk.min'
 var qqmapsdk = new QQMapWX({
@@ -347,7 +347,7 @@ Page({
     }
     let title = address.id > 0 ? '修改成功' : '新增成功';
     let url = address.id > 0 ? '/EditRecoveryAddressHS' : '/AddRecoveryAddressHS';
-    api.fetchPostRequest(url, address).then(function (res) {
+    fetchPostRequest(url, address).then(function (res) {
       if (res.data.code != 0) {
         wx.showToast({
           title: res.data.msg,
@@ -437,13 +437,45 @@ Page({
    * 初始化小区
    */
   _initCommunity: function () {
-    if(app.globalData.chosenCommunity) {
+    if(app.globalData.chosenCommunity) {   
+      //根据街道名称在addressList查询对应街道
+      const streetName = app.globalData.chosenCommunity.street;
+      const street = this._searchAddress(streetName);
+      // console.log('street:');
+      // console.log(street);
       this.setData({
         [`model.communityName`]: app.globalData.chosenCommunity.village,
         [`model.address`]: app.globalData.chosenCommunity.address,
+        [`model.districtCode`]: street.code.split('.').slice(0,3).join('.') + '.',
+        [`model.subdistrictCode`]: street.code,
         chosenCommunityId: app.globalData.chosenCommunity.id
       });  
+      this._initCityData();
     }
+  },
+
+  _searchAddress: function (streetName) {
+    let street = undefined;
+    let times = 0;
+    function searchStreet(array) {   
+      times++
+      array.forEach(item => {
+        if (item.depth == 3) {
+          if(item.name == streetName) {
+            street = item;
+          }
+        }else {
+          return searchStreet(item.childList);
+        }
+      })
+      return street
+    }
+
+    searchStreet(this.data.addressList);
+    // console.log('times', times);
+    return street;
+
+    // trampoline(sum(1, 100000))
   },
 
   /**
@@ -463,7 +495,7 @@ Page({
       communityName: '',
       address: ''
     };
-    api.fetchPostRequest('/GetRecoveryAddressInfoHS', {id: id}).then(function (res) {
+    fetchPostRequest('/GetRecoveryAddressInfoHS', {id: id}).then(function (res) {
       if (res.data.code != 0) {
         wx.showToast({
           title: res.data.msg,

@@ -36,11 +36,16 @@
   color: rgba(187,190,196,1);
 }
 
-.panel-userName, .panel-address { 
+.panel-userName { 
   height: 80rpx;
   background: #fff;
   border-bottom: 1rpx solid rgba(233,234,236,1);
   margin-top: 20rpx;
+}
+
+.panel-address {
+  height: 80rpx;
+  background: #fff;
 }
 
 .panel-address {
@@ -70,8 +75,13 @@
   background: #fff;
 }
 
+.panel-phoneNo, .panel-fullAddress {
+  border-bottom: 1rpx solid rgba(233,234,236,1);
+}
+
 .panel-community {
   border-bottom: 1rpx solid rgba(233,234,236,1);
+  margin-top: 20rpx;
 }
 
 .panel-community image {

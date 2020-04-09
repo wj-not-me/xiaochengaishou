@@ -405,6 +405,19 @@ Page({
    * 预估重量保留一位小数
    */
   formateWeight: function (e) {
+    if(e.detail.value.split('.')[0].length > 20) {
+      wx.showToast({
+        title: '预估量不能大于20位整数，请重新输入',
+        icon: 'none',
+        duration: 1000,
+        mask: false,
+        success: () => {}
+      });
+      this.setData({
+        weight: ''
+      });
+      return false;
+    }
     const weight = isNaN(parseFloat( e.detail.value)) ? null : parseFloat( e.detail.value).toFixed(1);
     this.setData({
       weight: weight
