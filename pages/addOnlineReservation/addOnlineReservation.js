@@ -405,9 +405,9 @@ Page({
    * 预估重量保留一位小数
    */
   formateWeight: function (e) {
-    if(e.detail.value.split('.')[0].length > 20) {
+    if(e.detail.value.split('.')[0].length > 16) {
       wx.showToast({
-        title: '预估量不能大于20位整数，请重新输入',
+        title: '预估量整数部分不能大于16位，请重新输入',
         icon: 'none',
         duration: 1000,
         mask: false,

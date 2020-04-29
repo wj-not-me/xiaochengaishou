@@ -89,7 +89,7 @@
 </view>
 <view class="panel-tips">
   <text class="inputLabel">备注</text>
-  <textarea  class="inputContent" placeholder-class="inputContent-placeholder" show-confirm-bar="" placeholder="{{look ? '' : '输入备注（回收重量少于5kg需要收取5元服务费）'}}" name="tips" value="{{tips}}" disabled="{{look}}" bindinput="inputTips"/>
+  <textarea  class="inputContent" placeholder-class="inputContent-placeholder" show-confirm-bar="" placeholder="{{look ? '' : '输入备注'}}" name="tips" value="{{tips}}" disabled="{{look}}" bindinput="inputTips"/>
 </view>
 
 <view class="panel-uploadPic">

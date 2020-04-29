@@ -1,6 +1,7 @@
 // pages/guidingPrice/guidingPrice.js
 
-const api = require('../../utils/request.js');
+import { fetchPostRequest } from '../../utils/request.js';
+import { formatTime } from '../../utils/util'
 Page({
 
   /**
@@ -8,7 +9,7 @@ Page({
    */
   data: {
     showNotice: true,
-    updateTime: new Date().toLocaleString(),
+    updateTime: formatTime(new Date()),
     gudingPriceList: []
   },
 
@@ -17,7 +18,7 @@ Page({
    */
   onLoad: function (options) {
     const that = this;
-    api.fetchPostRequest('/GetRecoveryTypesHS').then(function (res) {
+    fetchPostRequest('/GetRecoveryTypesHS').then(function (res) {
       if (res.data.code != 0) {
         wx.showToast({
           title: res.data.msg,
@@ -37,7 +38,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
