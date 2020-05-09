@@ -9,7 +9,7 @@
           <view>{{item.mobile}}</view>
         </view>  
         <view wx:if="{{item.provinceName}}" class="info-provinceCity">
-          <view>{{item.districtName + ' ' + item.subdistrictName}}</view> 
+          <view>{{item.districtName}}</view> 
         </view>
         <view class="info-community-address">
           <text space="nbsp">{{item.communityName ? item.communityName + '   ' : ''}}{{item.address}}</text>

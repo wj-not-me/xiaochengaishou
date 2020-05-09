@@ -16,7 +16,7 @@
         <view>{{recyclingAddress.mobile}}</view>
       </view>
       <view class="chosen-provinceCity">     
-        <view wx:if="{{recyclingAddress.provinceName}}">{{recyclingAddress.districtName + ' ' + recyclingAddress.subdistrictName}}</view> 
+        <view wx:if="{{recyclingAddress.districtName}}">{{recyclingAddress.districtName + ' ' + (status == 0 ? '' : recyclingAddress.subdistrictName) }}</view> 
         <!-- <text>{{recyclingAddress.address}}</text> -->
       </view>
       <view class="chosen-community-address">

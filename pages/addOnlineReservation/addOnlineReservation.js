@@ -12,7 +12,7 @@ Page({
     recyclingTypes:'',
     newImages: [],
     id: 0,
-    status: null,
+    status: 0,
     look: false,
     toChooseAddress: false,
     toChooseTypes: false,

@@ -19,6 +19,10 @@
     <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入详细地址，如道路、门牌号" name="address" value="{{model.address}}" />
   </view>
   <view class="panel-address inputPanel">
+    <view class="inputLabel"><view class="necessary">*</view>区/县</view>
+    <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入详细地址，如道路、门牌号" name="districtName" value="{{model.districtName}}" disabled/>
+  </view>
+  <!-- <view class="panel-address inputPanel">
     <view class="inputLabel"><view class="necessary"></view>所在地区</view>
     <view class="inputContent">
       <picker mode="multiSelector" bindcancel="bindMultiPickerCancel" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange2" 
@@ -33,7 +37,7 @@ value="{{sel_distinctIndex}}" range="{{distinctArray}}" range-key="name" name="c
     <input class="hiddenInput" name="cityCode" value="{{cityArray[1][sel_citiesIndex[1]].code}}" />
     <input class="hiddenInput" name="districtCode" value="{{cityArray[2][sel_citiesIndex[2]].code}}" />
     <input class="hiddenInput" name="subdistrictCode" value="{{cityArray[3][sel_citiesIndex[3]].code}}" />
-  </view>
+  </view> -->
   <!-- <view class="panel-neighborhoodCommittee inputPanel">
     <text class="inputLabel">所属居委会</text>
     <input class="inputContent" placeholder-class="inputContent-placeholder" placeholder="输入居委会名" name="committeeName" value="{{model.committeeName}}" />

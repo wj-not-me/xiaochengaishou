@@ -20,13 +20,14 @@ Page({
       id: '',
       name: '',
       mobile: '',
-      provinceCode: '',
-      cityCode:'',
-      districtCode: '.1.7.',
-      subdistrictCode: '',
-      committeeName: '',
+      // provinceCode: '',
+      // cityCode:'',
+      // districtCode: '.1.7.',
+      // subdistrictCode: '',
+      // committeeName: '',
       communityName: '',
-      address: ''
+      address: '',
+      districtName:''
     },
     // sel_addressLabel: '',
     // sel_address: '',
@@ -57,13 +58,15 @@ Page({
         [`model.mobile`]: wx.getStorageSync('phoneNo')
       })
       
-      this._initCityData();
+      // this._initCityData();
        // 实例化API核心类
-      qqmapsdk.reverseGeocoder({
+       qqmapsdk.reverseGeocoder({
         success: res => {
+          console.log(res.result)
           if (res.status === 0)
             this.setData({
-              [`model.address`]:res.result.address        
+              [`model.address`]:res.result.address,
+              [`model.districtName`]:res.result.address_component.district        
             });
           else console.log(res.message);
         },
@@ -71,7 +74,10 @@ Page({
           console.log(error)
         }
       });
+      
     }
+
+    
 
     
   },
@@ -87,6 +93,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
     this._initCommunity();
   },
 
@@ -396,10 +403,10 @@ Page({
       this.showInfo('请填写手机号');
       return false;
     }
-    if (!address.provinceCode || !address.cityCode || !address.districtCode || !address.subdistrictCode) {
-      this.showInfo('请选择正确的回收地址');
-      return false;
-    }
+    // if (!address.provinceCode || !address.cityCode || !address.districtCode || !address.subdistrictCode) {
+    //   this.showInfo('请选择正确的回收地址');
+    //   return false;
+    // }
     // if (!address.committeeName) {
     //   this.showInfo('请填写所属居委会');
     //   return false;
@@ -446,11 +453,11 @@ Page({
       this.setData({
         [`model.communityName`]: app.globalData.chosenCommunity.village,
         [`model.address`]: app.globalData.chosenCommunity.address,
-        [`model.districtCode`]: street.code.split('.').slice(0,3).join('.') + '.',
-        [`model.subdistrictCode`]: street.code,
+        // [`model.districtCode`]: street.code.split('.').slice(0,3).join('.') + '.',
+        // [`model.subdistrictCode`]: street.code,
         chosenCommunityId: app.globalData.chosenCommunity.id
       });  
-      this._initCityData();
+      // this._initCityData();
     }
   },
 
@@ -487,13 +494,14 @@ Page({
       id: '',
       name: '',
       mobile: '',
-      provinceCode: '',
-      cityCode: '',
-      districtCode: '',
-      subdistrictCode: '',
-      committeeName: '',
+      // provinceCode: '',
+      // cityCode: '',
+      // districtCode: '',
+      // subdistrictCode: '',
+      // committeeName: '',
       communityName: '',
-      address: ''
+      address: '',
+      districtName: ''
     };
     fetchPostRequest('/GetRecoveryAddressInfoHS', {id: id}).then(function (res) {
       if (res.data.code != 0) {
@@ -510,7 +518,7 @@ Page({
       });
 
     }).then(function (res) {
-      that._initCityData();
+      // that._initCityData();
     }); 
   },
 
