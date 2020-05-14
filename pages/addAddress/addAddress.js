@@ -368,12 +368,11 @@ Page({
         title: title,
         mask: true,
         icon: 'success',
-        duration: 20000,
-        success: () => {
-          wx.navigateBack({});
-          // setTimeout(() => {
-            
-          // }, 20000)
+        duration: 2000,
+        success: () => {       
+          setTimeout(() => {
+            wx.navigateBack({});
+          }, 2000)
         }
       });
     });
